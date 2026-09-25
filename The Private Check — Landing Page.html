@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Private Check — Before You Send the Money</title>
+<meta name="description" content="A private decision-making workbook for difficult money requests, financial boundaries and relationships. ₦3,500 · Instant digital access.">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4545843915705324');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4545843915705324&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<style>
+  :root{
+    --paper:#FAF7F1; --paper2:#F1EBDD; --card:#FFFFFF;
+    --ink:#221E19; --muted:#6E6659; --line:#E3DACB;
+    --gold:#A9762F; --gold-dark:#7C5A24; --gold-soft:#F1E4CC;
+    --dark:#1B1712; --dark2:#26211A;
+    --green:#4B6B4F; --green-soft:#E7EEE3;
+    --red:#8C4A3A; --red-soft:#F3E4DE;
+    box-sizing:border-box;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth; scroll-padding-top:70px;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  h1,h2,h3{font-family:'Georgia','Times New Roman',serif; font-weight:normal; margin:0; color:var(--dark);}
+  p{margin:0; line-height:1.65;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+  .narrow{max-width:640px;margin:0 auto;}
+  section{padding:76px 0;}
+  @media (max-width:640px){ section{padding:52px 0;} .wrap{padding:0 20px;} }
+
+  /* ===== NAV ===== */
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(250,247,241,.92); backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+    padding:14px 0;
+  }
+  .nav-row{display:flex; align-items:center; justify-content:space-between;}
+  .brand{font-family:'Georgia',serif; font-size:17px; letter-spacing:.3px;}
+  .nav-cta{
+    background:var(--dark); color:#F3E9D2; border:none; border-radius:7px;
+    padding:9px 16px; font-size:13.5px; font-family:inherit; cursor:pointer;
+    text-decoration:none; white-space:nowrap;
+  }
+
+  /* ===== BUTTONS ===== */
+  .btn-primary{
+    display:inline-block; background:var(--dark); color:#F3E9D2;
+    border:none; border-radius:9px; padding:16px 26px; font-size:15.5px;
+    font-family:inherit; cursor:pointer; text-decoration:none; font-weight:600;
+    letter-spacing:.2px;
+    transition:transform .15s ease, box-shadow .15s ease;
+    box-shadow:0 6px 18px rgba(27,23,18,.18);
+  }
+  .btn-primary:hover{transform:translateY(-1px); box-shadow:0 10px 22px rgba(27,23,18,.22);}
+  .btn-secondary{
+    display:inline-block; background:transparent; color:var(--ink);
+    border:1px solid var(--line); border-radius:9px; padding:15px 24px;
+    font-size:15px; text-decoration:none; font-family:inherit; cursor:pointer;
+  }
+  .btn-row{display:flex; gap:14px; flex-wrap:wrap; align-items:center;}
+  @media (max-width:480px){ .btn-row{flex-direction:column; align-items:stretch;} .btn-primary,.btn-secondary{text-align:center;} }
+
+  /* ===== HERO ===== */
+  .hero{padding:64px 0 60px 0;}
+  .hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:center;}
+  @media (max-width:860px){ .hero-grid{grid-template-columns:1fr;} }
+  .eyebrow{font-size:13px; color:var(--gold-dark); margin-bottom:16px;}
+  .hero h1{font-size:44px; line-height:1.08; letter-spacing:.2px;}
+  @media (max-width:640px){ .hero h1{font-size:32px;} }
+  .hero .sub{font-size:19px; color:var(--muted); font-style:italic; margin-top:18px; line-height:1.5;}
+  .hero .support{font-size:15.5px; color:var(--ink); margin-top:18px; max-width:440px;}
+  .hero .btn-row{margin-top:30px;}
+  .meta-row{
+    display:flex; gap:18px; flex-wrap:wrap; margin-top:26px;
+    font-size:12.5px; color:var(--muted);
+  }
+  .meta-row span{padding-right:18px; border-right:1px solid var(--line);}
+  .meta-row span:last-child{border-right:none; padding-right:0;}
+
+  /* ===== BOOK MOCKUP (CSS only) ===== */
+  .mock-wrap{display:flex; justify-content:center; position:relative;}
+  .mock-book{
+    width:290px; aspect-ratio:3/4; background:var(--dark);
+    border-radius:8px; position:relative; box-shadow:0 24px 50px rgba(27,23,18,.28);
+    display:flex; flex-direction:column; justify-content:space-between;
+    padding:34px 26px; color:#EFE7D6;
+    transform:rotate(-2deg);
+  }
+  .mock-book .mtop{font-size:9.5px; letter-spacing:2px; color:#C7A868;}
+  .mock-book h3{color:#FBF6EA; font-size:27px; line-height:1.1; margin-top:20px;}
+  .mock-book .mline{height:2px; width:44px; background:#C7A868; margin:16px 0;}
+  .mock-book .msub{font-style:italic; color:#D9CBA9; font-size:13px;}
+  .mock-card{
+    position:absolute; background:var(--card); border-radius:8px;
+    box-shadow:0 14px 30px rgba(27,23,18,.18); padding:14px 16px;
+    font-size:11px; width:168px; border:1px solid var(--line);
+  }
+  .mock-card.one{right:-18px; bottom:34px; transform:rotate(4deg);}
+  .mock-card.two{left:-26px; top:44px; transform:rotate(-5deg); width:140px;}
+  .mock-card .mc-lab{font-size:8.5px; color:var(--gold-dark); font-weight:700; letter-spacing:.6px; margin-bottom:5px;}
+  .mock-checks div{display:flex; align-items:center; gap:6px; margin:4px 0; color:var(--ink);}
+  .mock-checks .b{width:9px;height:9px;border:1.2px solid var(--ink); border-radius:2px; flex:none;}
+
+  /* ===== PAIN ===== */
+  .pain-head{max-width:600px; margin-bottom:12px;}
+  .pain-head h2{font-size:30px; line-height:1.2;}
+  .pain-intro{color:var(--muted); font-size:15.5px; margin-top:14px; max-width:560px;}
+  .pain-list{display:flex; flex-wrap:wrap; gap:8px 10px; margin-top:12px; font-size:13.5px; color:var(--ink);}
+  .pain-tag{background:var(--paper2); border-radius:20px; padding:6px 14px;}
+  .quote-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:36px;}
+  @media (max-width:760px){ .quote-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:480px){ .quote-grid{grid-template-columns:1fr;} }
+  .quote-card{
+    background:var(--card); border:1px solid var(--line); border-radius:10px;
+    padding:20px 18px; font-family:'Georgia',serif; font-style:italic; font-size:15px; color:var(--dark);
+  }
+  .pain-close{
+    margin-top:40px; padding-top:28px; border-top:1px solid var(--line);
+    font-family:'Georgia',serif; font-size:19px; line-height:1.5; color:var(--dark);
+  }
+  .pain-close .dim{color:var(--muted); display:block;}
+
+  /* ===== INTRO ===== */
+  .intro{background:var(--dark); color:#EFE7D6;}
+  .intro h2{color:#FBF6EA; font-size:30px;}
+  .intro-grid{display:grid; grid-template-columns:.9fr 1.1fr; gap:50px; align-items:start;}
+  @media (max-width:800px){ .intro-grid{grid-template-columns:1fr;} }
+  .intro p{color:#C9BFA4; font-size:15.5px; margin-top:16px;}
+  .intro .highlight{
+    margin-top:22px; padding:18px 20px; background:#26211A; border-left:3px solid #C7A868;
+    border-radius:4px; font-size:14.5px; color:#EFE7D6;
+  }
+  .intro .highlight b{color:#F3E9D2;}
+
+  /* ===== WHAT'S INSIDE ===== */
+  .inside-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:36px;}
+  @media (max-width:860px){ .inside-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:560px){ .inside-grid{grid-template-columns:1fr;} }
+  .inside-card{
+    background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px 22px;
+  }
+  .inside-card h3{font-size:17px; color:var(--dark); margin-bottom:8px;}
+  .inside-card p{font-size:13.8px; color:var(--muted);}
+
+  /* ===== PREVIEW ===== */
+  .preview-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin-top:36px;}
+  @media (max-width:900px){ .preview-grid{grid-template-columns:repeat(3,1fr);} }
+  @media (max-width:560px){ .preview-grid{grid-template-columns:1fr 1fr;} }
+  .preview-tile{
+    background:var(--card); border:1px solid var(--line); border-radius:10px;
+    aspect-ratio:3/4; padding:14px; display:flex; flex-direction:column; justify-content:space-between;
+  }
+  .preview-tile .pt-lab{font-size:9.5px; color:var(--gold-dark); font-weight:700;}
+  .preview-tile .pt-body{font-size:10.5px; color:var(--muted); line-height:1.4;}
+  .preview-cap{text-align:center; font-size:12.5px; color:var(--muted); margin-top:16px;}
+
+  /* mini illustrations for preview tiles */
+  .pt-tree{display:flex; flex-direction:column; align-items:center; gap:4px;}
+  .pt-node{background:var(--paper2); border:1px solid var(--line); border-radius:4px; font-size:8px; padding:3px 6px; text-align:center; width:100%;}
+  .pt-check div{display:flex; gap:5px; align-items:center; font-size:9px; margin:3px 0;}
+  .pt-check .b{width:7px;height:7px;border:1px solid var(--ink);border-radius:2px;flex:none;}
+  .pt-script{font-family:'Georgia',serif; font-style:italic; font-size:11px; color:var(--dark); line-height:1.4;}
+
+  /* ===== FOR YOU / NOT ===== */
+  .foryou{display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:32px;}
+  @media (max-width:640px){ .foryou{grid-template-columns:1fr;} }
+  .foryou-item{
+    background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px 18px;
+    font-family:'Georgia',serif; font-style:italic; font-size:14.5px;
+  }
+
+  .split{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:32px;}
+  @media (max-width:640px){ .split{grid-template-columns:1fr;} }
+  .split-card{border-radius:12px; padding:26px 24px;}
+  .split-card.no{background:var(--red-soft);}
+  .split-card.yes{background:var(--green-soft);}
+  .split-card h3{font-size:15px; margin-bottom:14px; color:var(--dark);}
+  .split-card div.row{display:flex; gap:9px; font-size:14px; margin:9px 0; color:var(--ink);}
+  .split-card.no .mark{color:var(--red);}
+  .split-card.yes .mark{color:var(--green);}
+
+  /* ===== TRANSFORMATION ===== */
+  .trans{text-align:center;}
+  .trans-flow{max-width:460px; margin:36px auto 0 auto;}
+  .trans-box{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px 20px; font-size:14.5px;}
+  .trans-box.before{font-family:'Georgia',serif; font-style:italic; color:var(--muted);}
+  .trans-box.after{font-family:'Georgia',serif; font-style:italic; color:var(--dark); background:var(--gold-soft); border-color:var(--gold);}
+  .trans-arrow{color:var(--muted); font-size:18px; margin:8px 0;}
+  .trans-steps{
+    display:flex; justify-content:center; gap:8px; flex-wrap:wrap;
+    font-size:12.5px; color:var(--gold-dark); font-weight:600; margin:10px 0;
+  }
+  .trans-steps span:not(.sep){background:var(--gold-soft); border-radius:16px; padding:5px 12px;}
+  .sep{color:var(--muted); font-weight:400;}
+
+  /* ===== PRICE ===== */
+  .price-wrap{display:flex; justify-content:center;}
+  .price-card{
+    background:var(--dark); color:#EFE7D6; border-radius:16px; padding:40px 36px;
+    max-width:420px; width:100%; text-align:center;
+    box-shadow:0 24px 60px rgba(27,23,18,.25);
+  }
+  .price-card .plabel{font-size:12px; color:#C7A868;}
+  .price-card h3{color:#FBF6EA; font-size:24px; margin-top:8px;}
+  .price-card .pamount{font-size:44px; color:#FBF6EA; margin:14px 0 6px 0; font-family:'Georgia',serif;}
+  .price-card .pnote{font-size:12.5px; color:#A79B7F;}
+  .price-list{text-align:left; margin:26px 0; padding:0; list-style:none;}
+  .price-list li{display:flex; gap:10px; font-size:14px; padding:7px 0; color:#EFE7D6; border-bottom:1px solid #3A342A;}
+  .price-list li:last-child{border-bottom:none;}
+  .price-list .mark{color:#C7A868;}
+  .price-card .btn-primary{background:#F3E9D2; color:var(--dark); width:100%; margin-top:6px;}
+  .price-card .fine{font-size:12px; color:#A79B7F; margin-top:14px;}
+
+  /* ===== FAQ ===== */
+  details{
+    border-bottom:1px solid var(--line); padding:18px 0;
+  }
+  details summary{
+    cursor:pointer; font-size:16px; color:var(--dark); list-style:none;
+    display:flex; justify-content:space-between; align-items:center; gap:12px;
+  }
+  details summary::-webkit-details-marker{display:none;}
+  details summary::after{content:'+'; font-size:20px; color:var(--gold-dark); flex:none;}
+  details[open] summary::after{content:'–';}
+  details p{margin-top:12px; color:var(--muted); font-size:14.5px; max-width:560px;}
+
+  /* ===== FINAL CTA ===== */
+  .final{background:var(--dark); color:#EFE7D6; text-align:center;}
+  .final h2{color:#FBF6EA; font-size:32px; line-height:1.25;}
+  .final .lines{margin:22px 0; font-size:15px; color:#C9BFA4; line-height:1.9;}
+  .final .btn-row{justify-content:center; margin-top:8px;}
+
+  footer{padding:28px 0; text-align:center; font-size:12px; color:var(--muted); background:var(--paper);}
+
+  /* sticky mobile CTA */
+  .sticky-cta{
+    display:none; position:fixed; left:0; right:0; bottom:0; z-index:60;
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px)) 16px;
+    background:rgba(250,247,241,.96); backdrop-filter:blur(6px);
+    border-top:1px solid var(--line);
+  }
+  .sticky-cta a{display:block; text-align:center;}
+  @media (max-width:640px){ .sticky-cta{display:block;} body{padding-bottom:70px;} }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-row">
+    <div class="brand">The Private Check</div>
+    <a class="nav-cta" href="https://selar.com/gfmw31m217" data-track="cta_nav">₦3,500 — Get it</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">A private decision-making workbook</div>
+      <h1>Before you send<br>the money.</h1>
+      <div class="sub">A private decision-making toolkit for difficult money requests, financial boundaries and relationships.</div>
+      <p class="support">Someone asks you for money. You want to help — but you're not sure whether you should. Before you say yes or no, take 10 minutes to think it through.</p>
+      <div class="btn-row">
+        <a href="https://selar.com/gfmw31m217" class="btn-primary" data-track="cta_hero_primary">Get The Private Check — ₦3,500</a>
+        <a href="#inside" class="btn-secondary">See what's inside</a>
+      </div>
+      <div class="meta-row">
+        <span>30+ pages</span><span>Worksheets</span><span>Decision tree</span><span>20 scripts</span><span>Instant digital access</span>
+      </div>
+    </div>
+    <div class="mock-wrap">
+      <div class="mock-book">
+        <div>
+          <div class="mtop">A PRIVATE CHECK WORKBOOK</div>
+          <h3>The Private<br>Check</h3>
+          <div class="mline"></div>
+          <div class="msub">Before You Send the Money</div>
+        </div>
+        <div style="font-size:10px;color:#8B8168;">30+ Pages · Digital Workbook</div>
+        <div class="mock-card one">
+          <div class="mc-lab">PATTERN CHECK</div>
+          <div class="mock-checks">
+            <div><span class="b"></span>Frequency increasing?</div>
+            <div><span class="b"></span>Respects my "no"?</div>
+          </div>
+        </div>
+        <div class="mock-card two">
+          <div class="mc-lab">SCRIPT</div>
+          <div style="font-family:Georgia,serif;font-style:italic;">"I need time to think about that."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section>
+  <div class="wrap">
+    <div class="pain-head">
+      <h2>The difficult part isn't always the money.</h2>
+      <p class="pain-intro">Money requests get complicated fast when they come from someone you care about — because they're rarely only about the amount.</p>
+    </div>
+    <div class="pain-list">
+      <span class="pain-tag">Love</span><span class="pain-tag">Guilt</span><span class="pain-tag">Pressure</span>
+      <span class="pain-tag">Obligation</span><span class="pain-tag">Fear of conflict</span>
+      <span class="pain-tag">Cultural expectations</span><span class="pain-tag">Financial differences</span>
+    </div>
+    <div class="quote-grid">
+      <div class="quote-card">"Am I being unreasonable?"</div>
+      <div class="quote-card">"Should I lend it?"</div>
+      <div class="quote-card">"What if they get angry when I say no?"</div>
+      <div class="quote-card">"They still owe me. Should I give again?"</div>
+      <div class="quote-card">"How do I say no without feeling guilty?"</div>
+    </div>
+    <div class="pain-close">
+      You don't need someone else to make the decision for you.
+      <span class="dim">You need a clearer way to think about it.</span>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="wrap intro-grid">
+    <div>
+      <h2>Meet The Private Check.</h2>
+    </div>
+    <div>
+      <p>A practical workbook designed to help you slow down, assess the situation, understand your own financial limits, and communicate your decision clearly.</p>
+      <div class="highlight"><b>It does not tell you what decision to make.</b> It helps you make your own decision, with more clarity.</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section id="inside">
+  <div class="wrap">
+    <h2 style="font-size:30px;">What's inside</h2>
+    <div class="inside-grid">
+      <div class="inside-card"><h3>The 10-Minute Money Check</h3><p>A simple framework for evaluating any money request before you answer.</p></div>
+      <div class="inside-card"><h3>The Pattern Check</h3><p>Look at frequency, repayment, pressure and boundaries — not just this one request.</p></div>
+      <div class="inside-card"><h3>Gift vs Loan</h3><p>Understand the difference before money changes hands, so expectations are never a surprise.</p></div>
+      <div class="inside-card"><h3>The Decision Tree</h3><p>A visual, step-by-step guide to help you think through your options clearly.</p></div>
+      <div class="inside-card"><h3>20 Boundary Scripts</h3><p>Natural ways to say yes, no, not now, or "I can help differently."</p></div>
+      <div class="inside-card"><h3>Money & Relationship Questions</h3><p>Discussion prompts for couples, before financial expectations become conflict.</p></div>
+      <div class="inside-card"><h3>Personal Money Boundary Plan</h3><p>Define — on paper — what you can comfortably give, lend or refuse.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PREVIEW -->
+<section>
+  <div class="wrap">
+    <h2 style="font-size:30px;">A look inside the workbook</h2>
+    <div class="preview-grid">
+      <div class="preview-tile">
+        <div class="pt-lab">DECISION TREE</div>
+        <div class="pt-tree">
+          <div class="pt-node">Can you afford it?</div>
+          <div class="pt-node">Gift or loan?</div>
+          <div class="pt-node">Make your decision</div>
+        </div>
+      </div>
+      <div class="preview-tile">
+        <div class="pt-lab">PATTERN CHECKLIST</div>
+        <div class="pt-check">
+          <div><span class="b"></span>Contact only when needing help</div>
+          <div><span class="b"></span>Amounts increasing</div>
+          <div><span class="b"></span>Respects my "no"</div>
+        </div>
+      </div>
+      <div class="preview-tile">
+        <div class="pt-lab">WORKSHEET</div>
+        <div class="pt-body">Monthly income, essential expenses, amount requested — worked out on the page, before you decide.</div>
+      </div>
+      <div class="preview-tile">
+        <div class="pt-lab">BOUNDARY SCRIPT</div>
+        <div class="pt-script">"I can't cover the full amount, but I can contribute ₦____."</div>
+      </div>
+      <div class="preview-tile">
+        <div class="pt-lab">MONEY & DATING</div>
+        <div class="pt-body">Ten questions to discuss with a partner before financial expectations become conflict.</div>
+      </div>
+    </div>
+    <div class="preview-cap">Real pages from the actual workbook.</div>
+  </div>
+</section>
+
+<!-- THIS IS FOR YOU -->
+<section>
+  <div class="wrap">
+    <h2 style="font-size:30px;">This is for you if you've ever thought:</h2>
+    <div class="foryou">
+      <div class="foryou-item">"I don't want to give the money, but I feel guilty saying no."</div>
+      <div class="foryou-item">"I don't know whether this is reasonable."</div>
+      <div class="foryou-item">"I don't want money to become a problem in my relationship."</div>
+      <div class="foryou-item">"I need time to think before I answer."</div>
+      <div class="foryou-item">"I don't know how to set a financial boundary."</div>
+    </div>
+  </div>
+</section>
+
+<!-- THIS IS NOT -->
+<section>
+  <div class="wrap">
+    <h2 style="font-size:30px;">Let's be clear about what this is.</h2>
+    <div class="split">
+      <div class="split-card no">
+        <h3>This is NOT</h3>
+        <div class="row"><span class="mark">✕</span>A guide to manipulating your partner</div>
+        <div class="row"><span class="mark">✕</span>A "men vs women" relationship book</div>
+        <div class="row"><span class="mark">✕</span>A guide to identifying "gold diggers"</div>
+        <div class="row"><span class="mark">✕</span>Professional financial or relationship counselling</div>
+        <div class="row"><span class="mark">✕</span>A promise that it can tell you someone's intentions</div>
+      </div>
+      <div class="split-card yes">
+        <h3>It IS</h3>
+        <div class="row"><span class="mark">✓</span>A practical reflection tool</div>
+        <div class="row"><span class="mark">✓</span>A boundary-setting workbook</div>
+        <div class="row"><span class="mark">✓</span>A decision-making framework</div>
+        <div class="row"><span class="mark">✓</span>A collection of useful conversation scripts</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSFORMATION -->
+<section class="trans">
+  <div class="wrap">
+    <h2 style="font-size:30px;">What changes</h2>
+    <div class="trans-flow">
+      <div class="trans-box before">"I don't know what to do."</div>
+      <div class="trans-arrow">↓</div>
+      <div class="trans-steps">
+        <span>Pause</span><span class="sep">→</span><span>Evaluate</span><span class="sep">→</span><span>Decide</span><span class="sep">→</span><span>Communicate</span>
+      </div>
+      <div class="trans-arrow">↓</div>
+      <div class="trans-box after">"I know what I'm comfortable with, and how I want to communicate it."</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section id="price">
+  <div class="wrap price-wrap">
+    <div class="price-card">
+      <div class="plabel">THE PRIVATE CHECK</div>
+      <h3>Before You Send the Money</h3>
+      <div class="pamount">₦3,500</div>
+      <div class="pnote">One-time payment · Instant digital access</div>
+      <ul class="price-list">
+        <li><span class="mark">✓</span>30+ page digital workbook</li>
+        <li><span class="mark">✓</span>Money decision framework</li>
+        <li><span class="mark">✓</span>Pattern checklist</li>
+        <li><span class="mark">✓</span>Decision tree</li>
+        <li><span class="mark">✓</span>20 boundary scripts</li>
+        <li><span class="mark">✓</span>Couple money conversation worksheet</li>
+        <li><span class="mark">✓</span>Personal money boundary plan</li>
+        <li><span class="mark">✓</span>Printable + phone-friendly format</li>
+      </ul>
+      <a href="https://selar.com/gfmw31m217" class="btn-primary" data-track="cta_price">Get The Private Check — ₦3,500</a>
+      <div class="fine">Instant digital access after payment.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap narrow">
+    <h2 style="font-size:28px; margin-bottom:8px;">Questions</h2>
+    <details>
+      <summary>Is this a physical book?</summary>
+      <p>No. It's a downloadable digital workbook.</p>
+    </details>
+    <details>
+      <summary>Who is it for?</summary>
+      <p>Adults dealing with difficult money requests involving partners, people they're dating, friends or family.</p>
+    </details>
+    <details>
+      <summary>Does it tell me whether someone is using me?</summary>
+      <p>No. It helps you examine patterns and make your own decision.</p>
+    </details>
+    <details>
+      <summary>Is this financial advice?</summary>
+      <p>No. It is a general decision-making and boundary-setting tool.</p>
+    </details>
+    <details>
+      <summary>Can I use it on my phone?</summary>
+      <p>Yes.</p>
+    </details>
+    <details>
+      <summary>Can I print it?</summary>
+      <p>Yes.</p>
+    </details>
+    <details>
+      <summary>When do I receive it?</summary>
+      <p>Immediately after successful payment.</p>
+    </details>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap narrow">
+    <h2>Before you send the money,<br>give yourself 10 minutes.</h2>
+    <div class="lines">
+      You don't have to answer immediately.<br>
+      You don't have to prove that you care.<br>
+      You don't have to feel guilty for having a boundary.
+    </div>
+    <div class="btn-row">
+      <a href="https://selar.com/gfmw31m217" class="btn-primary" data-track="cta_final">Get The Private Check — ₦3,500</a>
+    </div>
+  </div>
+</section>
+
+<footer>The Private Check — a private decision-making workbook. Not financial, legal or relationship counselling.</footer>
+
+<div class="sticky-cta">
+  <a href="https://selar.com/gfmw31m217" class="btn-primary" data-track="cta_sticky">₦3,500 — Get The Private Check</a>
+</div>
+
+<script>
+  // Meta Pixel scaffold — replace PIXEL_ID and uncomment to activate.
+  /*
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'PIXEL_ID');
+  fbq('track', 'PageView');
+  */
+
+  // ViewContent when the pricing card scrolls into view
+  var viewed = false;
+  var priceEl = document.getElementById('price');
+  if ('IntersectionObserver' in window && priceEl){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting && !viewed){
+          viewed = true;
+          if (window.fbq) fbq('track', 'ViewContent', {content_name:'The Private Check', value:3500, currency:'NGN'});
+        }
+      });
+    }, {threshold:0.4});
+    io.observe(priceEl);
+  }
+
+  // InitiateCheckout on any CTA click
+  document.querySelectorAll('[data-track]').forEach(function(el){
+    el.addEventListener('click', function(){
+      if (window.fbq) fbq('track', 'InitiateCheckout', {content_name:'The Private Check', value:3500, currency:'NGN'});
+    });
+  });
+
+  // Fire Purchase on your checkout success page instead, e.g.:
+  // fbq('track', 'Purchase', {value:3500, currency:'NGN'});
+</script>
+
+</body>
+</html>
